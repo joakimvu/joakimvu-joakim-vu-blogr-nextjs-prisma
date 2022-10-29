@@ -3,7 +3,6 @@ import { GetStaticProps } from "next";
 import Layout from "../components/Layout";
 import Post, { PostProps } from "../components/Post";
 import prisma from "../lib/prisma";
-import postList from "./../../next-pre-rendering/pages/posts/index";
 
 export const getStaticProps: GetStaticProps = async () => {
   const feed = await prisma.post.findMany({
